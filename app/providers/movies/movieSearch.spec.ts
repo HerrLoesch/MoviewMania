@@ -1,11 +1,11 @@
 import {beforeEachProviders, it, describe, expect, inject} from '@angular/core/testing';
-import {MovieRepository} from './movieRepository';
+import {Movies} from './movies';
  
 describe('movie search', () => {
  
-    beforeEachProviders(() => [MovieRepository]);
+    beforeEachProviders(() => [Movies]);
 
-    it('should return an array of movies for the search text lo', inject([MovieRepository], (movieRepository) =>{
+    it('should return an array of movies for the search text lo', inject([Movies], (movieRepository) =>{
  
         var movies = movieRepository.search("lo");
 
