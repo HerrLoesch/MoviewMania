@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -9,9 +8,14 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class Movies {
+export class MovieRepository {
 
-  constructor(private http: Http) {}
+  constructor() {}
+
+  public search(searchText: string) {
+
+      return new Array();
+  }
 
 }
 

@@ -59,14 +59,12 @@ module.exports = function(config) {
           outputFile: 'test/units.html',
                 
           // Optional 
-          pageTitle: 'Unit Tests',
-          subPageTitle: 'A sample project description',
+          pageTitle: 'MoviewsMania',
+          subPageTitle: 'Test results',
           groupSuites: true,
           useCompactStyle: true,
           useLegacyStyle: true
         },
-
- 
  
     // web server port
     port: 9876,
