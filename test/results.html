@@ -13,15 +13,15 @@
         <td colspan="3" title="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36">Browser: Chrome 53.0.2785 (Windows 10 0.0.0)</td>
       </tr>
       <tr class="overview">
-        <td colspan="3">Timestamp: 10/6/2016, 8:05:48 AM</td>
+        <td colspan="3">Timestamp: 10/6/2016, 10:34:35 AM</td>
       </tr>
       <tr>
         <td colspan="3">
           2 tests / 
-          0 errors / 
-          0 failures / 
+          1 errors / 
+          2 failures / 
           0 skipped / 
-          runtime: 0.008s
+          runtime: 0.049s
         </td>
       </tr>
       <tr class="header">
@@ -29,15 +29,40 @@
         <td>Spec</td>
         <td>Suite / Results</td>
       </tr>
-      <tr class="pass">
-        <td>Passed in 0.005s</td>
+      <tr class="fail">
+        <td>Failed</td>
         <td>should return an array of movies for the search text lo</td>
-        <td>movie search</td>
+        <td>
+          movie search
+          <br />Expected undefined to be greater than 0.
+    at C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:14:41 &lt;- app/providers/movies/movieSearch.spec.ts:17:30
+    at FunctionWrapper.apply (C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:12696:64 &lt;- node_modules/@angular/core/src/facade/lang.js:331:0)
+    at TestInjector.execute (C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:20265:39 &lt;- node_modules/@angular/core/testing/test_injector.js:56:0)
+    at Object.&lt;anonymous&gt; (C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:20358:55 &lt;- node_modules/@angular/core/testing/test_injector.js:149:0)
+
+        </td>
       </tr>
-      <tr class="pass">
-        <td>Passed in 0.003s</td>
+      <tr class="fail">
+        <td>Failed</td>
         <td>should return movies which titles contain the text lo</td>
-        <td>movie search</td>
+        <td>
+          movie search
+          <br />Expected undefined to be greater than 0.
+    at C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:22:41 &lt;- app/providers/movies/movieSearch.spec.ts:30:30
+    at FunctionWrapper.apply (C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:12696:64 &lt;- node_modules/@angular/core/src/facade/lang.js:331:0)
+    at TestInjector.execute (C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:20265:39 &lt;- node_modules/@angular/core/testing/test_injector.js:56:0)
+    at Object.&lt;anonymous&gt; (C:/Users/Hendrik/AppData/Local/Temp/d54b06881fddacecc7eb7e2a12ae31d1.browserify:20358:55 &lt;- node_modules/@angular/core/testing/test_injector.js:149:0)
+
+        </td>
+      </tr>
+      <tr class="system-out">
+        <td colspan="3"><strong>System output:</strong><br />Chrome 53.0.2785 (Windows 10 0.0.0) LOG: 'http://www.omdbapi.com/?s=lo'
+<br />Chrome 53.0.2785 (Windows 10 0.0.0) ERROR: 'Unhandled Promise rejection:', 'Cannot read property 'getCookie' of null', '; Zone:', '<root>', '; Task:', null, '; Value:', TypeError{}
+<br />Chrome 53.0.2785 (Windows 10 0.0.0) ERROR: Error{rejection: TypeError{}, promise: ZoneAwarePromise{__zone_symbol__state: 0, __zone_symbol__value: TypeError{}}, zone: Zone{_properties: Object{}, _parent: null, _name: '<root>', _zoneDelegate: ZoneDelegate{_taskCounts: ..., zone: ..., _parentDelegate: ..., _forkZS: ..., _forkDlgt: ..., _interceptZS: ..., _interceptDlgt: ..., _invokeZS: ..., _invokeDlgt: ..., _handleErrorZS: ..., _handleErrorDlgt: ..., _scheduleTaskZS: ..., _scheduleTaskDlgt: ..., _invokeTaskZS: ..., _invokeTaskDlgt: ..., _cancelTaskZS: ..., _cancelTaskDlgt: ..., _hasTaskZS: ..., _hasTaskDlgt: ...}}, task: null}
+<br />Chrome 53.0.2785 (Windows 10 0.0.0) LOG: 'http://www.omdbapi.com/?s=lo'
+<br />Chrome 53.0.2785 (Windows 10 0.0.0) ERROR: 'Unhandled Promise rejection:', 'Cannot read property 'getCookie' of null', '; Zone:', '<root>', '; Task:', null, '; Value:', TypeError{}
+<br />Chrome 53.0.2785 (Windows 10 0.0.0) ERROR: Error{rejection: TypeError{}, promise: ZoneAwarePromise{__zone_symbol__state: 0, __zone_symbol__value: TypeError{}}, zone: Zone{_properties: Object{}, _parent: null, _name: '<root>', _zoneDelegate: ZoneDelegate{_taskCounts: ..., zone: ..., _parentDelegate: ..., _forkZS: ..., _forkDlgt: ..., _interceptZS: ..., _interceptDlgt: ..., _invokeZS: ..., _invokeDlgt: ..., _handleErrorZS: ..., _handleErrorDlgt: ..., _scheduleTaskZS: ..., _scheduleTaskDlgt: ..., _invokeTaskZS: ..., _invokeTaskDlgt: ..., _cancelTaskZS: ..., _cancelTaskDlgt: ..., _hasTaskZS: ..., _hasTaskDlgt: ...}}, task: null}
+</td>
       </tr>
     </table>
     <hr/>

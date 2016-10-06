@@ -1,10 +1,13 @@
-import {beforeEachProviders, it, describe, expect, inject} from '@angular/core/testing';
+import {addProviders, beforeEachProviders, beforeEach, it, describe, expect, inject} from '@angular/core/testing';
+import { Http, ConnectionBackend,HTTP_PROVIDERS, XHRBackend } from '@angular/http';
 import {Movies} from './movies';
-import {some, includes, find} from 'lodash';
+import {includes, find} from 'lodash';
  
 describe('movie search', () => {
  
-    beforeEachProviders(() => [Movies]);
+    beforeEach(() => { 
+        addProviders([Movies, Http, ConnectionBackend, HTTP_PROVIDERS, XHRBackend]);
+    });
 
     it('should return an array of movies for the search text lo', inject([Movies], (movieRepository) =>{
  
@@ -18,7 +21,7 @@ describe('movie search', () => {
 
         var movies = movieRepository.search("lo");
         
-        var foundSearchPhrase = find(movies, function(movie) {
+        var foundSearchPhrase = find(movies, (movie) => {
 
             var missmatchFound = !includes(movie.Title, 'lo');
             return missmatchFound;
