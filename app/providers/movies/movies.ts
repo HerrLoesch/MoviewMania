@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {sum} from 'lodash';
 import 'rxjs/add/operator/map';
 
 /*
@@ -14,8 +15,23 @@ export class Movies {
 
   public search(searchText: string) {
 
-      return new Array();
+      let data = new Array();
+
+      let movie = new Movie();
+      movie.Title = "olo";
+
+      data.push(movie);
+
+      return data;
   }
 
+}
+
+export class Movie {
+  public Title : string;
+  public Year : number;
+  public imdbID: string;
+  public Type: string;
+  public Poster: string;
 }
 
