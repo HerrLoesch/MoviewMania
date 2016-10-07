@@ -7,8 +7,6 @@ export class Movies {
 
   constructor(private http: Http) {}
 
-  public movies: any;
-
   public search(searchText: string) {
        
 
@@ -21,6 +19,18 @@ export class Movies {
                  .subscribe(data => resolve(data.Search));
       });
   }
+
+  public getMovie(imdbID: string) {
+
+      return new Promise(resolve => {
+        let url = 'http://www.omdbapi.com/?i=' + imdbID;
+        console.log('start getting movie:' + url);
+
+        this.http.get(url)
+                 .map(result => result.json())
+                 .subscribe(data => resolve(data));
+      });
+  }
 }
 
 export class Movie {
@@ -29,5 +39,6 @@ export class Movie {
   public imdbID: string;
   public Type: string;
   public Poster: string;
+  
 }
 

@@ -3,13 +3,14 @@ import { ionicBootstrap, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { SearchPage } from './pages/Search/Search';
+import { DetailsPage } from './pages/Details/Details';
 
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
-  rootPage: any = SearchPage;
+  rootPage: any = DetailsPage;
 
   constructor(public platform: Platform) {
     platform.ready().then(() => {

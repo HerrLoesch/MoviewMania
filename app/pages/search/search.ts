@@ -21,7 +21,7 @@ export class SearchPage {
 
   private search(text: string){
         this.movieRepository.search(text)
-      .then(data => {
+        .then(data => {
         this.movies = data;
         console.log(data);
       })
