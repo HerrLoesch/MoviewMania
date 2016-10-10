@@ -10,7 +10,7 @@ import { DetailsPage } from './pages/Details/Details';
   template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
-  rootPage: any = DetailsPage;
+  rootPage: any = SearchPage;
 
   constructor(public platform: Platform) {
     platform.ready().then(() => {
