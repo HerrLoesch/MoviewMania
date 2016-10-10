@@ -3,19 +3,20 @@ import { ionicBootstrap, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { SearchPage } from './pages/Search/Search';
-import { DetailsPage } from './pages/Details/Details';
-
+import { FavoritesPage } from './pages/favorites/favorites';
+import { AboutPage } from './pages/about/about';
 
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+  templateUrl: 'build/app.html'
 })
 export class MyApp {
-  rootPage: any = SearchPage;
+
+    searchRoot = SearchPage;
+    favoritesRoot = FavoritesPage;
+    aboutRoot = AboutPage;
 
   constructor(public platform: Platform) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
     });
   }
