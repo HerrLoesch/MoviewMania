@@ -1,0 +1,17 @@
+<ion-navbar *navbar>
+  <ion-buttons start>
+    <button (click)="dismiss()">
+      Cancel
+    </button>
+  </ion-buttons>
+  <ion-title>Add Favorite</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+  <h2>{{title}}</h2>
+  <p>{{year}}</p>
+  <p>{{plot}}</p>
+
+<button (click)="save()">Save</button>
+</ion-content>

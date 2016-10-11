@@ -29,7 +29,7 @@
     </button>
 
     <ion-item-options side="right">
-      <button primary>
+      <button primary (click)="addFavorite(movie.imdbID)">
         <ion-icon ios="ios-star" md="md-star"></ion-icon>        
       </button>
     </ion-item-options>
